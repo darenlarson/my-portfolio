@@ -347,6 +347,7 @@ footer p {
 	header nav {
 		flex-direction: row;
 		width: unset;
+		margin-bottom: 0;
 		/* border: 1px solid red; */
 	}
 	header nav a {
