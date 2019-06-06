@@ -83,27 +83,81 @@ h6 {
 }
 /* #endregion */
 
+
+/* Variables */
+:root {
+	--primary: #3F56A1;
+	--secondary: #777777;
+	--secondary-light: #888888;
+	--tertiary: white;
+	--border: #f4f4f4;
+}
+
 h2 {
 	font-size: 3rem;
-	color: #777777;
+	color: var(--secondary);
 	margin-bottom: 40px;
 }
 
 p {
-	color: #888888;
+	color: var(--secondary-light);
 	font-size: 1.7rem;
 	line-height: 2;
 }
 
-.container {
 
+
+
+
+
+
+/* .video-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -100;
+	overflow: hidden;
+}
+
+.video-background {
+	position: absolute;
+	top: 0;
+	left: 30rem;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background {
+    width: 100%;
+    /* height: auto; */
+		/* height: 100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+  }
+} */ 
+
+
+
+
+
+
+.container {
 }
 
 header {
   height: 100%;
 	overflow: scroll;
   width: 30rem;
-  background: #4056A1;
+	background: var(--primary);
   position: fixed;
   top: 0;
   left: 10;
@@ -125,13 +179,13 @@ header img {
 }
 
 header h3 {
-	color: white;
+	color: var(--tertiary);
 	font-size: 3rem;
 	margin-bottom: 15px;
 }
 
 header p {
-	color: white;
+	color: var(--tertiary);
 	font-style: italic;
 	font-weight: 400;
 	font-size: 1.7rem;
@@ -147,9 +201,8 @@ header nav {
 }
 
 header nav a {
-	color: white;
+	color: var(--tertiary);
 	text-decoration: none;
-	/* margin: 20px; */
 	font-size: 2rem;
 	width: 100%;
 	text-align: center;
@@ -158,12 +211,12 @@ header nav a {
 
 header nav a:hover {
 	background: white;
-	color: #3F56A1;
+	color: var(--primary);
 }
 
 .tabs-link-selected {
 	background-color: white;
-  color: #3F56A1;
+  color: var(--primary);
 }
 
 header .contact {
@@ -174,12 +227,12 @@ header .contact {
 
 .social {
 	text-decoration: none;
-	color: white;
+	color: var(--tertiary);
 	font-size: 2.5rem;
 }
 
 .social:hover {
-	color: #777777;
+	color: var(--secondary);
 }
 
 
@@ -188,9 +241,10 @@ header .contact {
 }
 
 section {
-	border-top: solid 6px #f4f4f4;
+	border-top: solid 6px var(--border);
 	min-height: 500px;
 	margin-bottom: 100px;
+	z-index: 10;
 }
 
 section .content {
@@ -204,6 +258,7 @@ section .content {
 	border-top: none;
 	padding-top: 200px;
 	margin-bottom: 100px;
+	
 }
 
 .intro .content {
@@ -211,7 +266,7 @@ section .content {
 }
 
 .intro h1 {
-	color: #3F56A1;
+	color: var(--primary);
 	font-size: 6rem;
 	font-weight: bold;
 	margin-bottom: 25px;
@@ -236,7 +291,7 @@ section .content {
 	margin: 10px 40px 20px 0;
 	font-size: 1.7rem;
 	color: white;
-	background: #4056A1;
+	background: var(--primary);
 	border-radius: 4%;
 	font-style: italic;
 }
@@ -245,7 +300,7 @@ section .content {
 	display: flex;
 	margin-bottom: 50px;
 	padding-bottom: 50px;
-	border-bottom: solid 3px #f4f4f4
+	border-bottom: solid 3px var(--border);
 }
 
 .project:last-child {
@@ -267,26 +322,26 @@ section .content {
 	text-decoration: none;
 }
 .project .links a:hover {
-	color: #4056A1;
+	color: var(--primary);
 }
 
 .project h3 {
-	color: #777777;
+	color: var(--secondary);
 	margin-bottom: 25px;
 }
 
 .project h3:hover {
-	color: #4056A1;
+	color: var(--primary);
 }
 
 .project .links {
 	margin-top: 20px;
-	color: #777777;
+	color: var(--secondary);
 }
 
 .project .links a {
 	text-decoration: none;
-	color: #777777;
+	color: var(--secondary);
 }
 
 #four {
@@ -298,25 +353,27 @@ section .content {
 }
 
 .contact-me a {
-	color: #777777;
+	color: var(--secondary);
 	font-size: 4rem;
 	margin-right: 50px;
 }
 
 .contact-me a:hover {
-	color: #3F56A1;
+	color: var(--primary);
 }
 
 footer {
-	background: #FAFAFA;
-	height: 100px;
+	background: var(--primary);
+	height: 50px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
 footer p {
-	margin-right: 100px;
+	margin-right: 50px;
+	color: var(--tertiary);
+	font-size: 1.3rem;
 }
 
 
